@@ -23,13 +23,13 @@ const navOptions = [
                     <div className=" flex gap-[30px] ml-[7vw]">
                     {
                         navOptions.map(opt =>{
-                            return <a href={opt.route} className='text-blue-950'>{opt.name}</a>
+                            return <a href={opt.route} className='text-blue-950 hover:text-blue-800'>{opt.name}</a>
                         })
                     }
                     </div>
 
 
-                <button className='border-0 h-full w-[150px] ml-auto bg-green-600 text-white font-extralight text-[15px]'>
+                <button className='border-0 h-full w-[150px] ml-auto bg-green-600 hover:bg-green-500 text-white font-extralight text-[15px]'>
                     <div className="flex gap-[10px] justify-center items-center">
                         <p>Order Now</p>
                         <FaArrowTrendUp/>
