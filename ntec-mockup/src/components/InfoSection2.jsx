@@ -1,10 +1,29 @@
 import chemistry from '../assets/original-white-watermarks.png';
 import React from 'react';
+import { FaFilter } from 'react-icons/fa';
+import { AiOutlineRobot } from 'react-icons/ai';
+import { GiChemicalDrop } from 'react-icons/gi';
 
 function InfoSection2(props) {
 
     // add card info here
-    const techCards = [1,2,3]
+    const techCards = [
+        {
+            icon: <FaFilter size={50} className="text-blue-500" />, // Use Tailwind class for color
+            title: 'EV Isolation',
+            text: 'Ensures that only functional, pure EVs are used for delivery—critical for both drug development and agricultural sprays.'
+        },
+        {
+            icon: <AiOutlineRobot size={50} className="text-teal-400" />, // Use Tailwind class for color
+            title: 'AI & Machine Learning',
+            text: 'Predictive modeling and omics integration help optimize EV cargo selection, target delivery, and therapeutic outcomes.'
+        },
+        {
+            icon: <GiChemicalDrop size={50} className="text-yellow-500" />, // Use Tailwind class for color
+            title: 'Nanotech & Surface Engineering',
+            text: 'Functionalizing EVs for targeted delivery and stability using chemical modifications, ligands, or fusogenic elements.'
+        }
+    ];
 
     return (
         <div className="w-[100vw] h-[100vh] mt-[10vh]">
@@ -31,7 +50,11 @@ function InfoSection2(props) {
                 {/* hold 3 cards of technologies */}
                 {
                     techCards.map(card=>{
-                        return <div className=" border-2 h-[80%] min-w-[250px] w-[20%] max-w-[300px]"></div>
+                        return <div className=" border-0 flex flex-col  h-[80%] min-w-[250px] w-[20%] p-[20px] justify-around  max-w-[300px] bg-gray-100 shadow-2xl">
+                            {card.icon}
+                            <h3 className='font-extralight text-[20px]'>{card.title}</h3>
+                            <p className='text-gray-400'>{card.text}</p>
+                        </div>
                     })
                 }
             </div>

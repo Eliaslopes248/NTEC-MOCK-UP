@@ -18,7 +18,7 @@ const navOptions = [
         <div className="">
             <div className={`w-[100vw] h-[20px] bg-[#313659]`}></div>
             <div className='w-[100vw] p-[0px] border-0 h-[70px] max-h-[100px] flex items-center'>
-                <div className="p-[10px] border-2 w-fit text-blue-950 ml-[2vw]">logo</div>
+                <div className="p-[10px] border-2 w-fit text-blue-950 ml-[2vw] font-mono tracking-widest">KB</div>
 
                     <div className=" flex gap-[30px] ml-[7vw]">
                     {
