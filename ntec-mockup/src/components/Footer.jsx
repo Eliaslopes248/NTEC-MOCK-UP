@@ -45,9 +45,9 @@ export default function Footer() {
         boxes.map(box =>{
           return <div className="border-0 w-[25vw] h-full 2xl:ml-[20vw] p-[30px] flex flex-col gap-[20px]">
             <p>{box.location}</p>
-            <a href='' className='underline'>{box.email}</a>
+            <a href='' className='underline hover:text-green-600'>{box.email}</a>
             <p>{box.phone}</p>
-            <a href='' className='underline'>{box.address}</a>
+            <a href='' className='underline  hover:text-green-600'>{box.address}</a>
           </div>
         })
       }

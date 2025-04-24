@@ -1,14 +1,15 @@
 
 import React from 'react';
 import { FaArrowTrendUp } from "react-icons/fa6";
-import { colors } from '../colors';
+import { Link } from 'react-router-dom';
+import Orders from '../pages/order-page/Orders';
 
 
 
 function NavBar(props) {
 
 const navOptions = [
-    {name:'Home', route:''},
+    {name:'Home', route:'/'},
     {name:'About',route:''},
     {name:'Founder', route:''},
     {name:'Contact', route:''},
@@ -31,7 +32,7 @@ const navOptions = [
 
                 <button className='border-0 h-full w-[150px] ml-auto bg-green-600 hover:bg-green-500 text-white font-extralight text-[15px]'>
                     <div className="flex gap-[10px] justify-center items-center">
-                        <p>Order Now</p>
+                        <Link to={'/order'}>Order Now</Link>
                         <FaArrowTrendUp/>
                     </div>
                 </button>
